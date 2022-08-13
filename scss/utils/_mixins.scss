@@ -1,0 +1,7 @@
+@import './decimals';
+@mixin line-height($lh, $fs) {
+  line-height: decimal-round($lh / $fs);
+}
+@mixin flex-basis($indent, $item) {
+  flex-basis: calc((100% - #{$indent} * (#{$item} - 1)) / #{$item});
+}

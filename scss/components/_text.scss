@@ -1,0 +1,8 @@
+.txt {
+  font-family: var(--main-font);
+  font-size: 14px;
+  @include line-height(24, 14);
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-txt-clr);
+}

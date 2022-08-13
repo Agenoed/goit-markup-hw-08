@@ -1,0 +1,128 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.header__container {
+  @extend %container;
+
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 94px;
+}
+.header-nav__list {
+  @extend %reset-list;
+
+  display: flex;
+  gap: 50px;
+}
+.header-nav__link {
+  @extend %reset-link;
+
+  position: relative;
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  letter-spacing: 0.02em;
+
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 14px;
+  @include line-height(16, 14);
+
+  color: var(--main-txt-clr);
+
+  transition: color 250ms var(--timing-function);
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+    background-color: var(--accent-clr);
+
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 250ms var(--timing-function);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-clr);
+    fill: var(--accent-clr);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scale(1);
+  }
+
+  &--current {
+    color: var(--accent-clr);
+  }
+
+  &--current::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+
+    background-color: var(--accent-clr);
+
+    transform: scaleX(1);
+  }
+}
+.header-contact__list {
+  @extend %reset-list;
+
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+}
+.header-contact__link {
+  @extend %reset-link;
+
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 14px;
+  @include line-height(16, 14);
+  letter-spacing: 0.02em;
+
+  color: var(--secondary-txt-clr);
+
+  transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-clr);
+    fill: var(--accent-clr);
+  }
+}
+.header-contact__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}

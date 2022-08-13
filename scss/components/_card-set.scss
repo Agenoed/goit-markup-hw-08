@@ -1,0 +1,8 @@
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+.card-set__item {
+  @include flex-basis(var(--indent), var(--items));
+}

@@ -1,0 +1,27 @@
+.feature {
+  padding-top: 94px;
+}
+.feature__container {
+  @extend %container;
+  --items: 4;
+}
+.feature__list {
+  @extend %reset-list;
+}
+.feature__box-icon {
+  padding: 25px 100px;
+  margin-bottom: 30px;
+
+  border-radius: 4px;
+
+  background-color: var(--light-bg-clr);
+}
+.feature__icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feature__subtitle {
+  margin-bottom: 10px;
+  text-align: unset;
+}

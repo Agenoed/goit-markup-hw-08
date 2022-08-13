@@ -1,0 +1,15 @@
+.logo {
+  @extend %reset-link;
+
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  @include line-height(31, 26);
+
+  &--accent-clr {
+    color: var(--accent-clr);
+  }
+  &--light-txt {
+    color: var(--light-txt-clr);
+  }
+}
