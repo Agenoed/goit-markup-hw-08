@@ -1,0 +1,131 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  padding: 0px 40px 48px 40px;
+  background-color: #fff;
+
+  transform: translateX(200%);
+  transition: transform 250ms var(--timing-function);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu.is-open {
+  transform: translateX(0);
+}
+.menu__btn {
+  position: relative;
+  top: 13px;
+  right: -22px;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    fill: var(--accent-clr);
+  }
+}
+
+.menu-nav {
+  margin-bottom: auto;
+}
+.menu-nav__list {
+  @extend %reset-list;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.menu-nav__link {
+  @extend %reset-link;
+
+  position: relative;
+
+  display: flex;
+
+  letter-spacing: 0.02em;
+
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 40px;
+  @include line-height(47, 40);
+
+  color: var(--main-txt-clr);
+
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-clr);
+    fill: var(--accent-clr);
+  }
+
+  &--current {
+    color: var(--accent-clr);
+  }
+}
+
+.menu-contact__list {
+  @extend %reset-list;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-contact__link {
+  @extend %reset-link;
+
+  display: flex;
+
+  font-family: var(--main-font);
+  font-weight: 500;
+
+  font-size: 24px;
+  @include line-height(28, 24);
+  letter-spacing: 0.02em;
+
+  color: var(--secondary-txt-clr);
+
+  transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-clr);
+    fill: var(--accent-clr);
+  }
+  &--big-clr-txt {
+    font-size: 34px;
+    @include line-height(40, 34);
+    color: var(--accent-clr);
+    margin-bottom: 32px;
+  }
+}
+.menu-social__list {
+  @extend %reset-list;
+  display: flex;
+  margin-top: 64px;
+}
+.menu-social__link {
+  @extend %reset-link;
+  padding-right: 10px;
+  margin-right: 10px;
+
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 18px;
+  @include line-height(22, 18);
+
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  letter-spacing: 0.02em;
+  color: var(--accent-clr);
+  &--none-border {
+    border: 0;
+  }
+}
