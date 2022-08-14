@@ -1,5 +1,19 @@
 .work__list {
   @extend %reset-list;
+  @media screen and (min-width: 768px) {
+    --items: 2;
+  }
+  @media screen and (min-width: 1200px) {
+    --items: 4;
+  }
+}
+.work__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 .work__link {
   @extend %reset-link;
@@ -24,6 +38,11 @@
   padding: 20px 24px;
   background: #ffffff;
   border: 1px solid #eeeeee;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .work__item:first-child & {
+      padding-bottom: 52px;
+    }
+  }
 }
 .work__title {
   margin-bottom: 4px;
@@ -55,7 +74,7 @@
   justify-content: center;
   align-items: center;
 
-  width: 370px;
+  width: 450px;
   height: 294px;
   padding-left: 24px;
   padding-right: 24px;
@@ -68,5 +87,11 @@
   .work__link:hover &,
   .work__link:focus & {
     transform: translateY(0);
+  }
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 370px;
   }
 }

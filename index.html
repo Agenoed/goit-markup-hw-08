@@ -25,42 +25,75 @@
 
   <body data-page>
     <!-- Header -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__container">
         <a href="./index.html" class="logo header__logo"
           ><span class="logo logo--accent-clr">Web</span>Studio</a
         >
-        <nav class="header-nav">
-          <ul class="header-nav__list">
-            <li class="header-nav__item">
-              <a href="./index.html" class="header-nav__link header-nav__link--current">Студія</a>
-            </li>
-            <li class="header-nav__item">
-              <a href="./portfolio.html" class="header-nav__link">Портфоліо</a>
-            </li>
-            <li class="header-nav__item"><a href="" class="header-nav__link">Контакти</a></li>
-          </ul>
-        </nav>
-        <ul class="header-contact__list">
-          <li class="header-contact__item">
-            <a href="mailto:info@devstudio.com" class="header-contact__link">
-              <svg class="header-contact__icon" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header-contact__item">
-            <a href="tel:+380961111111" class="header-contact__link">
-              <svg class="header-contact__icon" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <button
+          type="button"
+          class="header__menu-btn"
+          aria-expanded="false"
+          aria-controls="header-menu"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use class="header__icon-menu" href="./images/icons.svg#icon-menu"></use>
+            <use class="header__icon-close" href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="header__menu" id="header-menu" data-menu>
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item">
+                <a href="./index.html" class="header-nav__link header-nav__link--current">Студія</a>
+              </li>
+              <li class="header-nav__item">
+                <a href="./portfolio.html" class="header-nav__link">Портфоліо</a>
+              </li>
+              <li class="header-nav__item"><a href="" class="header-nav__link">Контакти</a></li>
+            </ul>
+          </nav>
+          <div>
+            <ul class="header-contact__list">
+              <li class="header-contact__item">
+                <a href="mailto:info@devstudio.com" class="header-contact__link">
+                  <svg class="header-contact__icon" width="16" height="12">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="header-contact__item header-contact__item--order">
+                <a
+                  href="tel:+380961111111"
+                  class="header-contact__link header-contact__link--big-clr-txt"
+                >
+                  <svg class="header-contact__icon" width="10" height="16">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="header-social__list">
+              <li class="header-social__item">
+                <a class="header-social__link" href="">Instagram</a>
+              </li>
+              <li class="header-social__item">
+                <a class="header-social__link" href="">Twitter</a>
+              </li>
+              <li class="header-social__item">
+                <a class="header-social__link" href="">Facebook</a>
+              </li>
+              <li class="header-social__item">
+                <a class="header-social__link header-social__link--none-border" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </header> -->
+    </header>
     <!-- Main -->
     <main>
       <!-- Hero section -->
@@ -741,6 +774,7 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
     <script src="./js/header-scroll.js"></script>
   </body>
 </html>
