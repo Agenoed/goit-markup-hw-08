@@ -5,7 +5,10 @@
   @extend %container;
 }
 .clients__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 .clients__list {
   @extend %reset-list;
@@ -13,11 +16,12 @@
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 .clients__link {
   @extend %reset-link;
 
-  width: 170px;
+  width: 210px;
   height: 92px;
 
   display: flex;
@@ -35,5 +39,12 @@
   &:focus {
     fill: var(--accent-clr);
     border-color: var(--accent-clr);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
   }
 }

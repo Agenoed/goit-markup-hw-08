@@ -1,6 +1,5 @@
 .feature {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @extend %section;
   @media screen and (min-width: 1200px) {
     padding-bottom: 0;
   }
@@ -18,8 +17,10 @@
   @extend %reset-list;
 }
 .feature__item {
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
 .feature__box-icon {
