@@ -1,4 +1,5 @@
 .menu {
+  @extend %container;
   position: fixed;
   top: 0;
   left: 0;
@@ -114,8 +115,9 @@
 .menu-social__list {
   @extend %reset-list;
   display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  @media screen and (max-width: 479px) {
+    margin-bottom: 15px;
+  }
 }
 .menu-social__link {
   @extend %reset-link;
@@ -132,5 +134,10 @@
   color: var(--accent-clr);
   &--none-border {
     border: 0;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  @media screen and (max-width: 479px) {
+    font-size: calc(10px + 6 * (100vw / 480));
   }
 }
