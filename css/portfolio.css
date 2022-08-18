@@ -14,6 +14,7 @@ p {
 
 img {
   display: block;
+  width: auto;
   max-width: 100%;
   height: auto;
   -o-object-fit: cover;
@@ -57,7 +58,6 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 480px;
 }
 @media screen and (min-width: 480px) {
   .footer__container, .portfolio__container, .header__container {
@@ -264,6 +264,12 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .distribution {
+    text-align: center;
+  }
 }
 @media screen and (min-width: 1200px) {
   .distribution {
@@ -282,7 +288,7 @@ img {
 }
 
 .distribution__input {
-  width: 450px;
+  width: 300px;
   height: 50px;
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -323,6 +329,11 @@ img {
 }
 .distribution__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 480px) {
+  .distribution__input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .distribution__input {
@@ -429,7 +440,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 450px;
+  width: 100%;
   height: 294px;
   padding-left: 24px;
   padding-right: 24px;
@@ -444,6 +455,11 @@ img {
 .work__link:hover .work__overlay, .work__link:focus .work__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+@media screen and (max-width: 440px) {
+  .work__overlay {
+    padding-bottom: 50px;
+  }
 }
 @media screen and (min-width: 768px) {
   .work__overlay {
@@ -463,14 +479,10 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   width: 100vw;
   height: 100vh;
   z-index: 1000;
-  padding: 0px 40px 48px 40px;
+  padding: 48px 40px;
   background-color: #fff;
   -webkit-transform: translateX(200%);
           transform: translateX(200%);
@@ -491,10 +503,11 @@ img {
 }
 
 .menu__btn {
-  position: relative;
-  top: 13px;
-  right: -22px;
-  margin-left: auto;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  height: 40px;
+  padding: 0;
   border: none;
   background-color: transparent;
 }
@@ -502,8 +515,17 @@ img {
   fill: var(--accent-clr);
 }
 
-.menu-nav {
-  margin-bottom: auto;
+.menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu-nav__list {
@@ -518,7 +540,6 @@ img {
 }
 
 .menu-nav__link {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -547,6 +568,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 64px;
 }
 
 .menu-contact__link {
@@ -577,7 +599,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 64px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .menu-social__link {
